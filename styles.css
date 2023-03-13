@@ -1,108 +1,137 @@
+:root {
+    --black:#2b2a27;
+    --grey:#ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
+
 html {
     font-size: 100%;
 }
 
 body {
+    color: var(--black);
     font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
-img {
-    max-width: 100%;
-}
-
-ul {
+li {
     list-style: none;
 }
 
 a {
-    color: #2b2a27;
+    color: var(--black);
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: dotted 1px var(--grey);
 }
 p {
     text-align: left;
     margin-bottom: 20px;
 }
-.content {
+
+.img {
+    max-width: 100%;
+}
+.menu {
     display: flex;
+    justify-content:space-between;
 }
 
-.image {
-    width: 50%;
-}
-
-.image img {
+.mainvisual {
     height: 700px;
-    object-fit: cover;
-    width: 100%;
-}
-
-.text {
-    width: 50%;
-    text-align: center;
-    padding: 10px 30px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    text-align: start;
-    border-bottom: dotted 1px #ccc;
-    margin-bottom: 40px;
-
-}
-
-.flexbox {
     display: flex;
-    justify-content:space-between ;
-    border-bottom: dotted 1px #ccc;
-    padding: 6px 0;
-    flex-wrap: wrap;
+    flex:1 ;
+    padding-bottom: 80px;
 }
 
-.ingrident {
+.mainvisual img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.recipe {
+    margin-left: 5%;
+    margin-right: 5%;
+    flex: 1;
+    text-align: start;
+}
+
+.ingredient {
     margin-bottom: 40px;
 }
 
-ol {
-    margin-bottom: 80px;
+.ingredient p {
+    padding: 10px 30px
 }
-.text li {
-    border-bottom: dotted 1px #ccc;
-    text-align: left;
+
+.ingredient div {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.ingredient-list {
+    border-bottom: dotted 1px var(--grey);
     padding: 6px 0;
-    margin-left: 20px;
+}
+
+.step-list {
+    margin-bottom: 40px;
+}
+
+.step-list li {
+    text-align: left;
+    border-bottom: dotted 1px var(--grey);
+    list-style-position: inside;
+    padding: 6px 0;
+    
 }
 
 .btn {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding-bottom: 80px;
 }
-.btn-link {
+
+.btn a {
     border-style: solid;
     text-decoration: none;
     padding: 18px 60px;
+    color: var(--black);
 }
 
 .footer {
     font-size: 0.75rem;
 }
-.sns {
-    display: flex;
-    justify-content: center;
-}
-.sns li {
+
+.sns-list li {
     margin: 0 10px;
     padding: 0;
     margin-bottom: 20px;
 }
 
-.footer p {
+.sns-list {
+    display: flex;
+    justify-content: center;   
+}
+
+.copyright {
     text-align: center;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 834px) {
+    .menu {
+        flex-direction: column;
+    }
 }
